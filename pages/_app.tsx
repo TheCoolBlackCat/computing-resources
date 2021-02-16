@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   const menu = [
     {name: "Home", link: "/"},
     {name: "Contribute", link: "/contribute"},
-    {name: "File An Issue", link: "https://github.com/TheCoolBlackCat/file/an/issue"}
+    {name: "File An Issue", link: "https://github.com/TheCoolBlackCat/computing-resources/issues/new"}
   ]
   return (
     <div>
