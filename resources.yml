@@ -1,3 +1,20 @@
+---
+# ------------------------------------------------------------------------------
+# ---------  Directory of Resources ---------
+# ------------------------------------------------------------------------------
+#
+# This file includes all of the resources available in the directory.
+#
+# To add a new resource, complete the Contribute form on the website.
+# This will generate some YAML that you can paste at the bottom of this file,
+# in a pull request that needs to be approved by the moderators.
+#
+# After adding your YAML chunk to this file, select "Create a new branch for this
+# commit and start a pull request" at the bottom of the screen. Finally, click
+# "Commit changes" to open a Pull Request with your proposed changes.
+#
+# ---------------- ⬇︎ PLEASE ADD YOUR ENTRY BELOW THIS LINE ⬇︎ -----------------
+
 - title: A Super Cool Test Resource
   link: https://tdhc.uk
   img: https://placehold.it/800x600
