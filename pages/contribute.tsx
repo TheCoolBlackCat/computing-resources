@@ -122,6 +122,7 @@ export default class Contribute extends Component<Props, State> {
                     <TextInput
                         name="title"
                         label="Title"
+                        required
                         valid={true}
                         invalidFeedback="No title was specified"
                         value={values.title}
@@ -130,6 +131,7 @@ export default class Contribute extends Component<Props, State> {
                     <TextInput
                         name="link"
                         label="Link"
+                        required
                         help="Link to the resource"
                         // type="url"
                         valid={true}
@@ -150,6 +152,7 @@ export default class Contribute extends Component<Props, State> {
                     <TextInput
                         name="source"
                         label="Source"
+                        required
                         valid={true}
                         invalidFeedback="You did not specify a source"
                         value={values.source}
@@ -158,6 +161,7 @@ export default class Contribute extends Component<Props, State> {
                     <TextInput
                         name="tagline"
                         label="Tagline"
+                        required
                         valid={true}
                         invalidFeedback="The tagline needs to be at most 160 characters"
                         value={values.tagline}
@@ -175,6 +179,7 @@ export default class Contribute extends Component<Props, State> {
                     <TextInput
                         name="target"
                         label="Target Audience"
+                        required
                         valid={true}
                         invalidFeedback="Invalid Input!"
                         value={values.target}
