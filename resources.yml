@@ -28,18 +28,17 @@
     - Lecturers
   tags:
     - website
+    - blog
     - cool
-    - awesome
-    - learning
     - test
+
 - title: Another Resource
   link: https://tdhc.uk
   img: https://placehold.it/800x600
-  source: AwesomeSite Inc.
+  source: AwesomeSite Ltd.
   tagline: A quick test resource...
   purpose: >
-    A personal blog written by a Software Engineer, with some cool stuff on,
-    updated not all that often.
+    An awesome test resource made by some company called AwesomeSite Ltd.
   target:
     - 8-12 year olds
   tags:
