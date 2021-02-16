@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Security
+name: security
 
 on:
   push:
@@ -10,8 +10,11 @@ on:
     branches: [ main ]
 
 jobs:
-  audit:
+  safety:
     runs-on: ubuntu:20
     steps:
       - uses: actions/checkout@v2
-      - run: yarn audit
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: audit # will run `yarn audit` command
+      # - run:  yarn outdated || true
