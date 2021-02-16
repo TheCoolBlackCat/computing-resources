@@ -4,6 +4,6 @@
 A directory of useful resources for students learning about IT, programming and Computer Science.
 
 
-Currently available [here](https://gifted-feynman-99fdfd.netlify.app)
+Currently available [here](https://school-resources.netlify.app)
 
-You can contribute resources [here](https://gifted-feynman-99fdfd.netlify.app/contribute)
+You can contribute resources [here](https://school-resources.netlify.app/contribute)
