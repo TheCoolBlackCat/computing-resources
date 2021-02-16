@@ -180,10 +180,14 @@ export default class Contribute extends Component<Props, State> {
                     <button type="submit" className="btn btn-primary">Generate</button>
                 </form>
 
-                {out &&
-                <CopyToClipboard text={out}>
-                    <button className="btn btn-secondary">Copy this YAML</button>
-                </CopyToClipboard>}
+                {out && (
+                <div>
+                    <CopyToClipboard text={out}>
+                        <button className="btn btn-secondary">Copy this YAML</button>
+                    </CopyToClipboard>
+                    <a className="btn btn-success" href="https://github.com/TheCoolBlackCat/computing-resources/edit/main/resources.yml">Append to file</a>
+                </div>)}
+                
                 <pre>
                     {out}
                 </pre>
