@@ -21,13 +21,24 @@ function TextInput(props: TextInputProps) {
     const {name, label, valid, help, placeholder, required, invalidFeedback, type, onChange, value} = props
     const id = `${name}Input`
     const helpId = `${id}Help`
-    const validClass = !valid ? " is-invalid" : ""
+    const validClass = !valid ? "is-invalid" : ""
     const defaultType = "text"
     return (
         <div className="mb-3">
-            <label htmlFor={id} className="form-label">{label}</label>
-            <input type={defaultType || type} className={`form-control${validClass}`} id={id} name={name} aria-describedby={helpId} placeholder={placeholder} onChange={onChange} value={value} required={required} />
-            {help && <div id={helpId} className="form-text">{help}</div>}
+            <label htmlFor={id} className="form-label fw-normal">{label}</label>
+            <input
+                type={defaultType || type}
+                className={`form-control ${validClass}`}
+                id={id} name={name}
+                aria-describedby={helpId}
+                placeholder={placeholder}
+                onChange={onChange}
+                value={value}
+                required={required} />
+            {help && 
+            <div id={helpId} className="form-text text-muted fs-6 fw-light">
+                {help}
+            </div>}
             <div className="invalid-feedback">
                 {invalidFeedback}
             </div>
@@ -111,6 +122,7 @@ export default class Contribute extends Component<Props, State> {
                     <TextInput
                         name="title"
                         label="Title"
+                        required
                         valid={true}
                         invalidFeedback="No title was specified"
                         value={values.title}
@@ -119,6 +131,7 @@ export default class Contribute extends Component<Props, State> {
                     <TextInput
                         name="link"
                         label="Link"
+                        required
                         help="Link to the resource"
                         // type="url"
                         valid={true}
@@ -139,6 +152,7 @@ export default class Contribute extends Component<Props, State> {
                     <TextInput
                         name="source"
                         label="Source"
+                        required
                         valid={true}
                         invalidFeedback="You did not specify a source"
                         value={values.source}
@@ -147,10 +161,11 @@ export default class Contribute extends Component<Props, State> {
                     <TextInput
                         name="tagline"
                         label="Tagline"
+                        required
                         valid={true}
                         invalidFeedback="The tagline needs to be at most 160 characters"
                         value={values.tagline}
-                        placeholder=""
+                        placeholder="A really cool computer science blog!"
                         help="A brief description of this resource for the main index"
                         onChange={this.handleChange} />
                     <TextInput
@@ -164,6 +179,7 @@ export default class Contribute extends Component<Props, State> {
                     <TextInput
                         name="target"
                         label="Target Audience"
+                        required
                         valid={true}
                         invalidFeedback="Invalid Input!"
                         value={values.target}
@@ -180,10 +196,14 @@ export default class Contribute extends Component<Props, State> {
                     <button type="submit" className="btn btn-primary">Generate</button>
                 </form>
 
-                {out &&
-                <CopyToClipboard text={out}>
-                    <button className="btn btn-secondary">Copy this YAML</button>
-                </CopyToClipboard>}
+                {out && (
+                <div>
+                    <CopyToClipboard text={out}>
+                        <button className="btn btn-secondary">Copy this YAML</button>
+                    </CopyToClipboard>
+                    <a className="btn btn-success" href="https://github.com/TheCoolBlackCat/computing-resources/edit/main/resources.yml">Append to file</a>
+                </div>)}
+                
                 <pre>
                     {out}
                 </pre>
