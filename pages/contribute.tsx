@@ -21,13 +21,24 @@ function TextInput(props: TextInputProps) {
     const {name, label, valid, help, placeholder, required, invalidFeedback, type, onChange, value} = props
     const id = `${name}Input`
     const helpId = `${id}Help`
-    const validClass = !valid ? " is-invalid" : ""
+    const validClass = !valid ? "is-invalid" : ""
     const defaultType = "text"
     return (
         <div className="mb-3">
-            <label htmlFor={id} className="form-label">{label}</label>
-            <input type={defaultType || type} className={`form-control${validClass}`} id={id} name={name} aria-describedby={helpId} placeholder={placeholder} onChange={onChange} value={value} required={required} />
-            {help && <div id={helpId} className="form-text">{help}</div>}
+            <label htmlFor={id} className="form-label fw-normal">{label}</label>
+            <input
+                type={defaultType || type}
+                className={`form-control ${validClass}`}
+                id={id} name={name}
+                aria-describedby={helpId}
+                placeholder={placeholder}
+                onChange={onChange}
+                value={value}
+                required={required} />
+            {help && 
+            <div id={helpId} className="form-text text-muted fs-6 fw-light">
+                {help}
+            </div>}
             <div className="invalid-feedback">
                 {invalidFeedback}
             </div>
@@ -150,7 +161,7 @@ export default class Contribute extends Component<Props, State> {
                         valid={true}
                         invalidFeedback="The tagline needs to be at most 160 characters"
                         value={values.tagline}
-                        placeholder=""
+                        placeholder="A really cool computer science blog!"
                         help="A brief description of this resource for the main index"
                         onChange={this.handleChange} />
                     <TextInput
