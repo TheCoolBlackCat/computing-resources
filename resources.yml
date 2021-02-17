@@ -15,35 +15,79 @@
 #
 # ---------------- ⬇︎ PLEASE ADD YOUR ENTRY BELOW THIS LINE ⬇︎ -----------------
 
-- title: A Super Cool Test Resource
-  link: https://tdhc.uk
+662638f5f6f8-403e-8d73-91975bd405c4: 
+  title: Codecademy
+  link: https://www.codecademy.com
   img: https://placehold.it/800x600
-  source: Timothy Clark
-  tagline: A really cool resource for university students
-  purpose: >
-    A personal blog written by a Software Engineer, with some cool stuff on,
-    updated not all that often.
+  author: Codecademy
+  source: TheCoolBlackCat
+  tagline: Interactive online tutorials for learning how to code in various languages, along with some more complex Computing topics.
+  description: >
+    A more detailed description discussing the target audience and what
+    they can expect to gain from this material. It could be helpful to provide
+    some detail on how long it will take students/teachers to navigate the material
+    and how much prior knowledge is required to understand it.
+  platforms:
+    - Web
+    # - Windows
+    # - macOS
+    # - Linux
+    # - iOS
+    # - Android
+    # - micro:bit
+    # - Rapberry Pi
+    # - Arduino
   target:
-    - University Students
-    - Lecturers
+    - teachers
+    - adults
+    - university
+    # - pre-school
+    # - early primary
+    - late primary
+    - early secondary
+    - GCSE
+    - A-Level
   tags:
     - website
-    - blog
-    - cool
-    - test
-
-- title: Another Resource
-  link: https://tdhc.uk
-  img: https://placehold.it/800x600
-  source: AwesomeSite Ltd.
-  tagline: A quick test resource...
-  purpose: >
-    An awesome test resource made by some company called AwesomeSite Ltd.
+    - online
+    - interactive
+    - fun
+    - intuitive
+    - intro
+    - coding
+    - javascript
+    - python
+  
+6371f891359c-4b16-a290-4ee5e9c12604:
+  title: Codecademy Go
+  link: https://www.codecademy.com/mobile-app-download
+  img: https://upload.wikimedia.org/wikipedia/en/d/d7/Codecademy-home.png
+  author: Codecademy
+  source: TheCoolBlackCat
+  tagline: Interactive tutors provided through a mobile app on iOS and Android
+  description: >
+    A more detailed description discussing the target audience and what
+    they can expect to gain from this material. It could be helpful to provide
+    some detail on how long it will take students/teachers to navigate the material
+    and how much prior knowledge is required to understand it.
+  platforms:
+    - iOS
+    - Android
   target:
-    - 8-12 year olds
+    - teachers
+    - adults
+    - university
+    - late primary
+    - early secondary
+    - GCSE
+    - A-Level
   tags:
-    - website
-    - cool
-    - awesome
-    - learning
-    - test
+    - app
+    - interactive
+    - quick
+    - fun
+    - intuitive
+    - intro
+    - coding
+    - javascript
+    - python

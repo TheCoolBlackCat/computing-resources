@@ -1,5 +1,6 @@
 import { Component, ChangeEvent, FormEvent } from 'react'
 import {CopyToClipboard} from 'react-copy-to-clipboard'
+import {v4 as uuidV4} from 'uuid'
 
 type FormChangeEvent = ChangeEvent<HTMLInputElement|HTMLSelectElement|HTMLTextAreaElement>
 // type FormSubmitEvent = FormEvent<HTMLFormElement
@@ -59,6 +60,7 @@ type FormValues = {
 }
 
 type State = {
+    uuid: string
     out: string
     values: FormValues
 }
@@ -67,6 +69,7 @@ export default class Contribute extends Component<Props, State> {
     constructor(props: Props) {
         super(props)
         this.state = {
+            uuid: uuidV4().replace('-', ''),
             out: "",
             values: {
                 title: "",
@@ -110,7 +113,7 @@ export default class Contribute extends Component<Props, State> {
         const tagsList = tagsA.length > 1 ? ("\n\ttags: " + tagsA.join("\n\t\t- ")) : ""
 
         // FIXME: Use the YAML library
-        this.setState({out: `- title: ${title} \n\tlink: ${link} \n\timg: ${img} \n\tsource: ${source} \n\ttagline: ${tagline} \n\tpurpose: ${purpose} ${targetList} ${tagsList} \n`})
+        this.setState({out: `${this.state.uuid}: \n\ttitle: ${title} \n\tlink: ${link} \n\timg: ${img} \n\tsource: ${source} \n\ttagline: ${tagline} \n\tpurpose: ${purpose} ${targetList} ${tagsList} \n`})
     }
 
     render () {
