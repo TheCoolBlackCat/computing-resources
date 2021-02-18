@@ -8,14 +8,15 @@ type Props = {
 
 function getPlatformIcon(platform: Platform) {
     const icons: Map<Platform, string> = new Map()
-    icons.set("Android", "fa fa-android")
-    icons.set("iOS", "fa fa-app-store-ios")
-    icons.set("Web", "fa fa-globe")
-    icons.set("Windows", "fa fa-windows")
-    icons.set("macOS", "fa fa-apple")
-    icons.set("Linux", "fa fa-linux")
-    icons.set("Raspberry Pi", "fa fa-raspberry-pi")
-    const microchip = "fa fa-microchip"
+    icons.set("Android", "fab fa-android")
+    icons.set("iOS", "fab fa-app-store-ios")
+    icons.set("Web", "fas fa-globe")
+    icons.set("YouTube", "fab fa-youtube")
+    icons.set("Windows", "fab fa-windows")
+    icons.set("macOS", "fab fa-apple")
+    icons.set("Linux", "fab fa-linux")
+    icons.set("Raspberry Pi", "fab fa-raspberry-pi")
+    const microchip = "fas fa-microchip"
     icons.set("Arduino", microchip)
     icons.set("micro:bit", microchip)
     return icons.get(platform) || "fa fa-code"

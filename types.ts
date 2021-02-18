@@ -1,5 +1,6 @@
 type Platform = (
     "Web" |
+    "YouTube" |
     "Windows" |
     "macOS" |
     "Linux" |

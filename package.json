@@ -9,8 +9,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
     "bootstrap": "^4.6.0",
-    "font-awesome": "^4.7.0",
     "next": "10.0.6",
     "react": "17.0.1",
     "react-copy-to-clipboard": "^5.0.3",
