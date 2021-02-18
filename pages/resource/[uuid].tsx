@@ -27,7 +27,7 @@ export default function resource(props: Props) {
     const tagsList = tags.map((tag, i) => <span key={i} className="badge rounded-pill bg-info text-light">{tag}</span>)
     const targetList = "Suitable for: " + target.join(', ')
     const platformList = platforms.map((platform, i) => (
-        <div key={i} className="">
+        <div key={i} className="list-group-item list-group-item-action">
             <i className={getPlatformIcon(platform)} aria-hidden="true"></i>
             {platform}
         </div>
@@ -43,14 +43,12 @@ export default function resource(props: Props) {
                 <h4><strong>{author}</strong>{source === author || ` | Submitted by ${source}`}</h4>
                 <img
                     src={img}
-                    // width="800px"
-                    // height="250px"
                     className="img-fluid"
                     alt="" />
                 <p>{description}</p>
                 <p className="text-muted">{targetList}</p>
                 {target.join}
-                <div className="platforms">
+                <div className="platforms list-group">
                     {platformList}
                 </div>
                 <div className="tags">
