@@ -15,6 +15,131 @@
 #
 # ---------------- ⬇︎ PLEASE ADD YOUR ENTRY BELOW THIS LINE ⬇︎ -----------------
 
+f4c954121a01-4510-94ed-d905c9a4d3a5:
+  title: Introduction to Computing with micro:bit
+  link: https://www.youtube.com/watch?v=M4JdhPqmp7A&list=PLXwAdcOl0lCrDF-ympqZC94r59Xpb36GD
+  img: https://i.ytimg.com/vi/M4JdhPqmp7A/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCaO1T96JU0P7Igpq07y-Sr-G5Etw
+  source: TheCoolBlackCat
+  author: ARM
+  tagline: Fundamentals Computer Science on micro:bit!
+  description: >
+    This playlist takes you through fundamentals Computer Science on
+    micro:bit. The playlist covers what a micro:bit is, how it works, how to use
+    the various blocks in MakeCode and how to use the various Computer Science
+    structures like Sequence, Selection and Iteration through to advanced
+    features like using functions to make more modular and efficient
+    programs.   The playlist also covers how to use the various features of the
+    micro:bit's hardware like the sensors and accelerometer to create useful and
+    interactive projects that you can make at home.   This playlist also include
+    a list of 'Have a Go' activities that you can use to experiment with and
+    challenge yourself by applying the theory in the videos.   This playlist is
+    a fantastic introduction to Physical Computing and once you are confident
+    with the theory you can explore our other playlist, Introduction to
+    Computing with MicroPython' which goes on to using Python (a text-based
+    programming language) to learn more about Computing and how to program.
+  targets:
+    - early secondary
+    - late secondary
+  platforms:
+    - YouTube
+    - micro:bit
+  tags:
+    - computer science
+    - computing
+    - micro:bit
+
+166c85802f2b-4bb7-8f4e-9d25589e37a0:
+  title: "Crash Course: Computer Science"
+  link: https://www.youtube.com/playlist?list=PLME-KWdxI8dcaHSzzRsNuOLXtM2Ep_C7a
+  img: https://i.ytimg.com/vi/tpIctyqH29Q/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBLAvGQ4jvOcAijS0luN_yy2J4Pmg
+  source: TheCoolBlackCat
+  author: Crash Course
+  tagline: A YouTube series teaching Computer Science for A-Level/early University
+  description: >
+    In this series, we're going to trace the origins of our modern
+    computers, take a closer look at the ideas that gave us our current hardware
+    and software, discuss how and why our smart devices just keep getting
+    smarter, and even look towards the future! Computers fill a crucial role in
+    the function of our society, and it's our hope that over the course of this
+    series you will gain a better understanding of how far computers have taken
+    us and how far they may carry us into the future.
+  targets:
+    - A-Level
+    - University
+  platforms:
+    - YouTube
+  tags:
+    - video
+    - computer science
+    - series
+    - course
+    - Carrie Anne Philbin
+    - Geek Gurl Diaries
+
+3a92eff4cab3-4c32-b5d0-ac99cd2a6d05:
+  title: Swift Playgrounds
+  link: https://www.apple.com/uk/swift/playgrounds/
+  img: https://upload.wikimedia.org/wikipedia/en/0/0e/Screenshot_of_Swift_Playgrounds_for_iPad.jpg
+  source: TheCoolBlackCat
+  author: Apple
+  tagline: Learn to code by solving puzzles in an interactive sandbox whilst
+    learning real Swift code
+  description: >
+    Swift Playgrounds is a revolutionary app for iPad and Mac that
+    makes learning Swift interactive and fun. It requires no coding knowledge,
+    so it’s perfect for students just starting out. Solve puzzles to master the
+    basics using Swift — a powerful programming language created by Apple and
+    used by the pros to build today’s most popular apps. Then take on a series
+    of challenges and step up to more advanced playgrounds designed by Apple and
+    other leading developers.
+  targets:
+    - early primary
+    - pre-school
+  platforms:
+    - macOS
+    - iOS
+  tags:
+    - fun
+    - interactive
+    - mobile
+    - swift
+    - quick
+    - kids
+
+6371f891359c-4b16-a290-4ee5e9c12604:
+  title: Codecademy Go
+  link: https://www.codecademy.com/mobile-app-download
+  img: https://upload.wikimedia.org/wikipedia/en/d/d7/Codecademy-home.png
+  author: Codecademy
+  source: TheCoolBlackCat
+  tagline: Interactive tutors provided through a mobile app on iOS and Android
+  description: >
+    A more detailed description discussing the target audience and what
+    they can expect to gain from this material. It could be helpful to provide
+    some detail on how long it will take students/teachers to navigate the material
+    and how much prior knowledge is required to understand it.
+  platforms:
+    - iOS
+    - Android
+  targets:
+    - teachers
+    - adults
+    - university
+    - late primary
+    - early secondary
+    - GCSE
+    - A-Level
+  tags:
+    - app
+    - interactive
+    - quick
+    - fun
+    - intuitive
+    - intro
+    - coding
+    - javascript
+    - python
+
 662638f5f6f8-403e-8d73-91975bd405c4: 
   title: Codecademy
   link: https://www.codecademy.com
@@ -57,67 +182,3 @@
     - coding
     - javascript
     - python
-  
-6371f891359c-4b16-a290-4ee5e9c12604:
-  title: Codecademy Go
-  link: https://www.codecademy.com/mobile-app-download
-  img: https://upload.wikimedia.org/wikipedia/en/d/d7/Codecademy-home.png
-  author: Codecademy
-  source: TheCoolBlackCat
-  tagline: Interactive tutors provided through a mobile app on iOS and Android
-  description: >
-    A more detailed description discussing the target audience and what
-    they can expect to gain from this material. It could be helpful to provide
-    some detail on how long it will take students/teachers to navigate the material
-    and how much prior knowledge is required to understand it.
-  platforms:
-    - iOS
-    - Android
-  targets:
-    - teachers
-    - adults
-    - university
-    - late primary
-    - early secondary
-    - GCSE
-    - A-Level
-  tags:
-    - app
-    - interactive
-    - quick
-    - fun
-    - intuitive
-    - intro
-    - coding
-    - javascript
-    - python
-
-3a92eff4cab3-4c32-b5d0-ac99cd2a6d05:
-  title: Swift Playgrounds
-  link: https://www.apple.com/uk/swift/playgrounds/
-  img: https://upload.wikimedia.org/wikipedia/en/0/0e/Screenshot_of_Swift_Playgrounds_for_iPad.jpg
-  source: TheCoolBlackCat
-  author: Apple
-  tagline: Learn to code by solving puzzles in an interactive sandbox whilst
-    learning real Swift code
-  description: >
-    Swift Playgrounds is a revolutionary app for iPad and Mac that
-    makes learning Swift interactive and fun. It requires no coding knowledge,
-    so it’s perfect for students just starting out. Solve puzzles to master the
-    basics using Swift — a powerful programming language created by Apple and
-    used by the pros to build today’s most popular apps. Then take on a series
-    of challenges and step up to more advanced playgrounds designed by Apple and
-    other leading developers.
-  targets:
-    - early primary
-    - pre-school
-  platforms:
-    - macOS
-    - iOS
-  tags:
-    - fun
-    - interactive
-    - mobile
-    - swift
-    - quick
-    - kids
