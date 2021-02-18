@@ -1,6 +1,7 @@
 import { Component, ChangeEvent, FormEvent } from 'react'
 import {CopyToClipboard} from 'react-copy-to-clipboard'
 import {v4 as uuidV4} from 'uuid'
+import YAML from 'yaml'
 
 type FormChangeEvent = ChangeEvent<HTMLInputElement|HTMLSelectElement|HTMLTextAreaElement>
 // type FormSubmitEvent = FormEvent<HTMLFormElement
@@ -53,9 +54,11 @@ type FormValues = {
     link: string
     img: string
     source: string
+    author: string
     tagline: string 
-    purpose: string
-    target: string
+    description: string
+    targets: string
+    platforms: string
     tags: string
 }
 
@@ -76,9 +79,11 @@ export default class Contribute extends Component<Props, State> {
                 link: "",
                 img: "",
                 source: "",
+                author: "",
                 tagline: "",
-                purpose: "",
-                target: "",
+                description: "",
+                platforms: "",
+                targets: "",
                 tags: ""
             }
         }
@@ -94,26 +99,28 @@ export default class Contribute extends Component<Props, State> {
 
     handleSubmit(e) {
         e.preventDefault()
-        const {title, link, img, source, tagline, purpose, target, tags} = this.state.values
+        const {title, link, img, source, author, tagline, description, platforms, targets, tags} = this.state.values
 
         //TODO: Validate URLS - link, img
         //TODO: Validate title, link, img, source, tagline present
         //TODO: Validate tagline < 160 chars
 
-        let targetA = [""]
-        if (target) {
-            targetA = [...targetA, ...target.split(',').map(s => s.trim())]
+        const obj = {}
+        obj[this.state.uuid] = {
+            title: title,
+            link: link,
+            img: img,
+            source: source,
+            author: author,
+            tagline: tagline,
+            description: description,
+            targets: targets !== "" ? targets.split(',').map(s => s.trim()) : undefined,
+            platforms: platforms !== "" ? platforms.split(',').map(s => s.trim()) : undefined,
+            tags: tags !== "" ? tags.split(',').map(s => s.trim()) : undefined,
         }
-        const targetList = targetA.length > 1 ? ("\n\ttarget: " + targetA.join("\n\t\t- ")) : ""
-
-        let tagsA = [""]
-        if (tags) {
-            tagsA = [...tagsA, ...tags.split(',').map(s => s.trim())]
-        }
-        const tagsList = tagsA.length > 1 ? ("\n\ttags: " + tagsA.join("\n\t\t- ")) : ""
-
-        // FIXME: Use the YAML library
-        this.setState({out: `${this.state.uuid}: \n\ttitle: ${title} \n\tlink: ${link} \n\timg: ${img} \n\tsource: ${source} \n\ttagline: ${tagline} \n\tpurpose: ${purpose} ${targetList} ${tagsList} \n`})
+        this.setState({out: YAML.stringify(obj, {
+            indent: 2,
+        })})
     }
 
     render () {
@@ -153,10 +160,21 @@ export default class Contribute extends Component<Props, State> {
                         placeholder="https://www.my-website.co.uk/image.jpg"
                         onChange={this.handleChange} />
                     <TextInput
+                        name="author"
+                        label="Author"
+                        required
+                        valid={true}
+                        help="Who made it?"
+                        invalidFeedback="You did not specify an author"
+                        value={values.author}
+                        placeholder="Steve, TheirCompany Ltd, MyCompany Ltd., etc."
+                        onChange={this.handleChange} />
+                    <TextInput
                         name="source"
                         label="Source"
                         required
                         valid={true}
+                        help="What can we call you?"
                         invalidFeedback="You did not specify a source"
                         value={values.source}
                         placeholder="David, MyCompany Ltd, etc."
@@ -172,21 +190,30 @@ export default class Contribute extends Component<Props, State> {
                         help="A brief description of this resource for the main index"
                         onChange={this.handleChange} />
                     <TextInput
-                        name="purpose"
-                        label="Purpose"
+                        name="description"
+                        label="Description"
                         valid={true}
                         invalidFeedback="Invalid Input!"
-                        value={values.purpose}
+                        value={values.description}
                         placeholder="Personal blog with lots of useful articles, Online tutorial, etc."
                         onChange={this.handleChange} /> 
                     <TextInput
-                        name="target"
+                        name="targets"
                         label="Target Audience"
                         required
                         valid={true}
                         invalidFeedback="Invalid Input!"
-                        value={values.target}
+                        value={values.targets}
                         placeholder="8-12 year olds, University Students, Teachers, ..."
+                        onChange={this.handleChange} />
+                    <TextInput
+                        name="platforms"
+                        label="Platforms"
+                        required
+                        valid={true}
+                        invalidFeedback="Invalid Input!"
+                        value={values.platforms}
+                        placeholder="Web, iOS, Android, Raspberry Pi..."
                         onChange={this.handleChange} />
                     <TextInput
                         name="tags"

@@ -1,8 +1,8 @@
-import {ResourceList, ResourceMap, Resource} from '../types'
+import {ResourceList, Resource} from '../types'
 // import styles from '../styles/Home.module.css'
-import fs from 'fs'
-import YAML from 'yaml'
+
 import { Component } from 'react'
+import {getData} from './utils'
 
 type Props = {
   data: ResourceList
@@ -13,16 +13,8 @@ type State = {
 }
 
 export async function getStaticProps() {
-  // Get external data from the file system, API, DB, etc.
-  const file = fs.readFileSync('./resources.yml', 'utf8')
-  const data: object = YAML.parse(file)
-  // The value of the `props` key will be
-  //  passed to the `Home` component
   return {
-    props: {
-      data: Object.keys(data).map(key =>
-      ({uuid: key, ...data[key]}) // ...data[key]
-    )}
+    props: {data: getData()}
   }
 }
 
@@ -58,12 +50,12 @@ export default class Home extends Component<Props, State> {
           <div className="card-body">
             <h3>{x.title}</h3>
             <h4>{x.author}</h4>
-            <p>Designed for {x.target.join(', ')}</p>
+            <p>Designed for {x.targets.join(', ')}</p>
             <p>{x.tagline}</p>
             <div className="tags">
               {x.tags.map((tag, i) => <span key={i} className="badge rounded-pill bg-info text-light">{tag}</span>)}
             </div>
-            <a href="#" className="btn btn-secondary">Learn More</a>
+            <a href={`/resource/${x.uuid}`} className="btn btn-secondary">Learn More</a>
           </div>
         </div>
       </div>

@@ -18,7 +18,7 @@
 662638f5f6f8-403e-8d73-91975bd405c4: 
   title: Codecademy
   link: https://www.codecademy.com
-  img: https://placehold.it/800x600
+  img: https://upload.wikimedia.org/wikipedia/en/d/d7/Codecademy-home.png
   author: Codecademy
   source: TheCoolBlackCat
   tagline: Interactive online tutorials for learning how to code in various languages, along with some more complex Computing topics.
@@ -35,9 +35,9 @@
     # - iOS
     # - Android
     # - micro:bit
-    # - Rapberry Pi
+    # - Raspberry Pi
     # - Arduino
-  target:
+  targets:
     - teachers
     - adults
     - university
@@ -73,7 +73,7 @@
   platforms:
     - iOS
     - Android
-  target:
+  targets:
     - teachers
     - adults
     - university
@@ -91,3 +91,33 @@
     - coding
     - javascript
     - python
+
+3a92eff4cab3-4c32-b5d0-ac99cd2a6d05:
+  title: Swift Playgrounds
+  link: https://www.apple.com/uk/swift/playgrounds/
+  img: https://upload.wikimedia.org/wikipedia/en/0/0e/Screenshot_of_Swift_Playgrounds_for_iPad.jpg
+  source: TheCoolBlackCat
+  author: Apple
+  tagline: Learn to code by solving puzzles in an interactive sandbox whilst
+    learning real Swift code
+  description: >
+    Swift Playgrounds is a revolutionary app for iPad and Mac that
+    makes learning Swift interactive and fun. It requires no coding knowledge,
+    so it’s perfect for students just starting out. Solve puzzles to master the
+    basics using Swift — a powerful programming language created by Apple and
+    used by the pros to build today’s most popular apps. Then take on a series
+    of challenges and step up to more advanced playgrounds designed by Apple and
+    other leading developers.
+  targets:
+    - early primary
+    - pre-school
+  platforms:
+    - macOS
+    - iOS
+  tags:
+    - fun
+    - interactive
+    - mobile
+    - swift
+    - quick
+    - kids
