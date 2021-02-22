@@ -1,8 +1,8 @@
 import {ResourceList, Resource} from '../types'
 // import styles from '../styles/Home.module.css'
-import fs from 'fs'
-import YAML from 'yaml'
+
 import { Component } from 'react'
+import {getData} from '../utils'
 
 type Props = {
   data: ResourceList
@@ -13,13 +13,8 @@ type State = {
 }
 
 export async function getStaticProps() {
-  // Get external data from the file system, API, DB, etc.
-  const file = fs.readFileSync('./resources.yml', 'utf8')
-  const data: ResourceList = YAML.parse(file)
-  // The value of the `props` key will be
-  //  passed to the `Home` component
   return {
-    props: {data: data}
+    props: {data: getData()}
   }
 }
 
@@ -34,28 +29,33 @@ export default class Home extends Component<Props, State> {
 
   handleChange(e) {
     this.setState({search: e.currentTarget.value})
+    // TODO: This should probably be de-bounced
   }
 
   render () {
     const {props, state} = this 
     // TODO: Add auto-generated modal/link when "Learn More is clicked"
     const cleanSearch = state.search.trim().toLowerCase()
-    const filteredData = props.data.filter(x =>
-      x.title.toLowerCase().indexOf(cleanSearch) !== -1 ||
-      x.source.toLowerCase().indexOf(cleanSearch) !== -1
-)
-    const list = filteredData.map((x, i) => (
+    const filteredData = props.data.filter(x => {
+      return x.title.toLowerCase().indexOf(cleanSearch) !== -1 ||
+      x.author.toLowerCase().indexOf(cleanSearch) !== -1 ||
+      x.tagline.toLowerCase().indexOf(cleanSearch) !== -1
+    })
+    const list = filteredData.map(x => (
       <div className="col-md-4">
-        <div key={i} className="card">
+        <div key={x.uuid} className="card">
           <div className="card-img">
             <img src={x.img} style={{width: "100%"}} />
           </div>
           <div className="card-body">
             <h3>{x.title}</h3>
-            <h4>{x.source}</h4>
-            <p>Designed for {x.target.join(', ')}</p>
+            <h4>{x.author}</h4>
+            <p>Designed for {x.targets.join(', ')}</p>
             <p>{x.tagline}</p>
-            <a href="#" className="btn btn-secondary">Learn More</a>
+            <div className="tags">
+              {x.tags.map((tag, i) => <span key={i} className="badge rounded-pill bg-info text-light">{tag}</span>)}
+            </div>
+            <a href={`/resource/${x.uuid}`} className="btn btn-secondary">Learn More</a>
           </div>
         </div>
       </div>

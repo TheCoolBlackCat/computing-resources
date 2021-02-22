@@ -1,14 +1,42 @@
+type Platform = (
+    "Web" |
+    "YouTube" |
+    "Windows" |
+    "macOS" |
+    "Linux" |
+    "iOS" |
+    "Android" |
+    "micro:bit" |
+    "Raspberry Pi" |
+    "Arduino"
+)
+
+type Target = (
+    "teachers" |
+    "adults" |
+    "university" |
+    "pre-school" |
+    "early primary" |
+    "late primary" |
+    "early secondary" |
+    "GCSE" |
+    "A-Level"
+)
+
 type Resource = {
+    uuid: string
     title: string
     link: string
     img: string
+    author: string
     source: string
     tagline: string
-    purpose: string
-    target: string[]
+    description: string
+    platforms: Platform[]
+    targets: Target[]
     tags: string[]
 }
-  
+
 type ResourceList = Array<Resource>
 
-export type {Resource, ResourceList}
+export type {Platform, Target, Resource, ResourceList}
