@@ -1,4 +1,4 @@
-import {getData} from '../utils'
+import {getData} from '../../utils'
 import Link from 'next/link'
 import {Resource, Platform, Target} from '../../types'
 

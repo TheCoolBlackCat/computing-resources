@@ -2,7 +2,7 @@ import {ResourceList, Resource} from '../types'
 // import styles from '../styles/Home.module.css'
 
 import { Component } from 'react'
-import {getData} from './utils'
+import {getData} from '../utils'
 
 type Props = {
   data: ResourceList
